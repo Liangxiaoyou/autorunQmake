@@ -21,7 +21,7 @@ HEADERS += \
     head/knownDll.h \
     head/logon.h \
     head/mytable.h \
-    head/schedTask2.h \
+    head/schedTask.h \
     head/serviceDriver.h \
     head/sig.h \
     head/timeStamp.h \

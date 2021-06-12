@@ -6,7 +6,7 @@
 #include "./head/knownDll.h"
 //#include "./head/sig.h"
 #include "./head/verify.h"
-#include "./head/schedTask2.h"
+#include "./head/schedTask.h"
 //#include "./head/getCert.h"
 #include <qstring.h>
 
