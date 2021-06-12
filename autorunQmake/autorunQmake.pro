@@ -17,9 +17,11 @@ HEADERS += \
     description.h \
     head/activeX.h \
     head/fileDescription.h \
+    head/getCert.h \
     head/knownDll.h \
     head/logon.h \
     head/mytable.h \
+    head/schedTask2.h \
     head/serviceDriver.h \
     head/sig.h \
     head/timeStamp.h \
@@ -40,6 +42,7 @@ LIBS += \
     -lversion \
     -lwintrust \
     -lcrypt32 \
+#    -lcryptui\
     -lole32 \
     -loleaut32 \
     -ltaskschd \

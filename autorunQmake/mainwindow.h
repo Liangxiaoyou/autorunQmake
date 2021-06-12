@@ -31,5 +31,6 @@ private:
     mytable tbl3;//derivers
     mytable tbl4;//activeX
     mytable tbl5;//knowndlls
+    mytable tbl6;//sched tasks
 };
 #endif // MAINWINDOW_H

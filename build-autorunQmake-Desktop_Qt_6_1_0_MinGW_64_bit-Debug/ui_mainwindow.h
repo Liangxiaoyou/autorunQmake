@@ -39,6 +39,8 @@ public:
     QTableWidget *tableWidget_6;
     QWidget *tab_5;
     QTableWidget *tableWidget_5;
+    QWidget *tab_6;
+    QTableWidget *tableWidget_4;
     QWidget *tab;
     QTextBrowser *textBrowser;
     QMenuBar *menubar;
@@ -225,6 +227,39 @@ public:
         tableWidget_5->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
         tableWidget_5->horizontalHeader()->setStretchLastSection(true);
         tabWidget->addTab(tab_5, QString());
+        tab_6 = new QWidget();
+        tab_6->setObjectName(QString::fromUtf8("tab_6"));
+        tableWidget_4 = new QTableWidget(tab_6);
+        if (tableWidget_4->columnCount() < 5)
+            tableWidget_4->setColumnCount(5);
+        QTableWidgetItem *__qtablewidgetitem25 = new QTableWidgetItem();
+        tableWidget_4->setHorizontalHeaderItem(0, __qtablewidgetitem25);
+        QTableWidgetItem *__qtablewidgetitem26 = new QTableWidgetItem();
+        tableWidget_4->setHorizontalHeaderItem(1, __qtablewidgetitem26);
+        QTableWidgetItem *__qtablewidgetitem27 = new QTableWidgetItem();
+        tableWidget_4->setHorizontalHeaderItem(2, __qtablewidgetitem27);
+        QTableWidgetItem *__qtablewidgetitem28 = new QTableWidgetItem();
+        tableWidget_4->setHorizontalHeaderItem(3, __qtablewidgetitem28);
+        QTableWidgetItem *__qtablewidgetitem29 = new QTableWidgetItem();
+        tableWidget_4->setHorizontalHeaderItem(4, __qtablewidgetitem29);
+        tableWidget_4->setObjectName(QString::fromUtf8("tableWidget_4"));
+        tableWidget_4->setGeometry(QRect(0, 0, 1000, 400));
+        sizePolicy.setHeightForWidth(tableWidget_4->sizePolicy().hasHeightForWidth());
+        tableWidget_4->setSizePolicy(sizePolicy);
+        tableWidget_4->setMinimumSize(QSize(0, 0));
+        tableWidget_4->setMaximumSize(QSize(2001, 16777215));
+        tableWidget_4->setAutoFillBackground(true);
+        tableWidget_4->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+        tableWidget_4->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+        tableWidget_4->setColumnCount(5);
+        tableWidget_4->horizontalHeader()->setVisible(false);
+        tableWidget_4->horizontalHeader()->setCascadingSectionResizes(false);
+        tableWidget_4->horizontalHeader()->setMinimumSectionSize(30);
+        tableWidget_4->horizontalHeader()->setDefaultSectionSize(150);
+        tableWidget_4->horizontalHeader()->setHighlightSections(true);
+        tableWidget_4->horizontalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tableWidget_4->horizontalHeader()->setStretchLastSection(true);
+        tabWidget->addTab(tab_6, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
         textBrowser = new QTextBrowser(tab);
@@ -248,7 +283,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -312,6 +347,17 @@ public:
         QTableWidgetItem *___qtablewidgetitem24 = tableWidget_5->horizontalHeaderItem(4);
         ___qtablewidgetitem24->setText(QCoreApplication::translate("MainWindow", "Timestamp", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QCoreApplication::translate("MainWindow", "KnownDLLs", nullptr));
+        QTableWidgetItem *___qtablewidgetitem25 = tableWidget_4->horizontalHeaderItem(0);
+        ___qtablewidgetitem25->setText(QCoreApplication::translate("MainWindow", "Autorun Entry", nullptr));
+        QTableWidgetItem *___qtablewidgetitem26 = tableWidget_4->horizontalHeaderItem(1);
+        ___qtablewidgetitem26->setText(QCoreApplication::translate("MainWindow", "Description", nullptr));
+        QTableWidgetItem *___qtablewidgetitem27 = tableWidget_4->horizontalHeaderItem(2);
+        ___qtablewidgetitem27->setText(QCoreApplication::translate("MainWindow", "Publisher", nullptr));
+        QTableWidgetItem *___qtablewidgetitem28 = tableWidget_4->horizontalHeaderItem(3);
+        ___qtablewidgetitem28->setText(QCoreApplication::translate("MainWindow", "Image Path", nullptr));
+        QTableWidgetItem *___qtablewidgetitem29 = tableWidget_4->horizontalHeaderItem(4);
+        ___qtablewidgetitem29->setText(QCoreApplication::translate("MainWindow", "Timestamp", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_6), QCoreApplication::translate("MainWindow", "Scheduled Tasks", nullptr));
         textBrowser->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

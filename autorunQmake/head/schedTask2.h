@@ -1,11 +1,12 @@
-/********************************************************************
+﻿/********************************************************************
  This sample enumerates through the tasks on the local computer and 
  displays their name and state. 
 ********************************************************************/
 
 // https://docs.microsoft.com/en-us/windows/win32/taskschd/displaying-task-names-and-state--c---
 
-
+#ifndef _SCHEDTASK_H
+#define _SCHEDTASK_H
 
 #include <windows.h>
 #include <iostream>
@@ -16,6 +17,9 @@
 #include <ole2.h>
 #include <taskschd.h>
 #include <combaseapi.h>
+#include <qstring.h>
+#include "mytable.h"
+#include "tran.h"
 //  Include the task header file.
 
 #pragma comment(lib, "taskschd.lib")
@@ -27,6 +31,7 @@
 
 void  initSchedTasks(mytable *tbl)
 {
+    tbl->appenIntro("\\Task Scheduler");
     //  ------------------------------------------------------
     //  Initialize COM.
     CoUninitialize();
@@ -136,12 +141,23 @@ void  initSchedTasks(mytable *tbl)
             {
                 printf("\nTask Name: %S", taskName);
                 SysFreeString(taskName);
-
+                BSTR path;
+                DATE date;
                 hr = pRegisteredTask->get_State(&taskState);
                 if (SUCCEEDED (hr) )
                     printf("\n\tState: %d", taskState);
                 else 
                     printf("\n\tCannot get the registered task state: %x", hr);
+                pRegisteredTask->get_Path(&path);
+                char* spath;
+                spath=wchar2char(path);
+                cout<<spath<<endl;
+                tbl->appendRow(spath,
+                               "",
+                               "",
+                               "to be found",
+                               ""
+                            );
             }
             else
             {
@@ -159,3 +175,5 @@ void  initSchedTasks(mytable *tbl)
     CoUninitialize();
     return ;// 0;
 }
+
+#endif
