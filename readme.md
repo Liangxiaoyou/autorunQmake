@@ -9,7 +9,7 @@ mingw 8.1.0
 
 ## 使用方法
 
-1.使用qtcreator编译./autorun文件夹里的项目autorun.pro
+1.使用qtcreator编译./autorunQmake文件夹里的项目autorunQmake.pro
 
 
 2.如果没有安装qt ，win10里可以直接打开./version文件夹下的autorunQmake.exe
